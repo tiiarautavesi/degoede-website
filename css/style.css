@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+
+body {
+  margin: 0;
+  font-family: 'PT Serif', serif;
+}
+
+.text-section {
+  padding: 8vw 8vw;
+}
+
+.section2 {
+  background-image: url("../img/stairs-bg.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+.section3 {
+  background-image: url("../img/shelf-bg.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+.section6 {
+  background-image: url("../img/IMG_1336.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+.text-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2vw 3vw;
+}
+
+.text-container2 {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1vw;
+  color: white;
+  margin-left: 65%;
+  width: 35%;
+}
+
+.text-container3 {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1vw;
+  color: black;
+  margin-left: 65%;
+  width: 35%;
+}
+
+.text-container4 {
+  width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.img-container-gif {
+  display: inline-block;
+  width: 20vw;
+  vertical-align: middle;
+  padding-left: 5vw;
+}
+
+.header {
+  padding: 2vw;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 0.3vw solid white;
+  border-top: 0.3vw solid white;
+  box-shadow: 0 0.7vw 1vw rgba(0, 0, 0, 0.1)
+}
+
+.nav-logo {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+
+#navbar a {
+  display: inline-block;
+  vertical-align: bottom;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 1vw 1.2vw;
+  text-decoration: none;
+  font-size: 1.2vw;
+  width: 10.8vw;
+}
+
+#navbar a:hover {
+  background-color: #d63c24;
+  color: #fff;
+}
+
+#navbar a.active {
+  background-color: #d63c24;
+  color: #fff;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+svg {
+  width: 70%;
+}
+
+.st0 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-linejoin: round;
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 2100;
+  -webkit-animation: dash 2s linear forwards;
+  animation: dash 2s linear forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.st1 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 2100;
+  -webkit-animation: dash 8s linear forwards;
+  animation: dash 8s linear forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/*images*/
+
+.gallery {
+  text-align: center;
+}
+
+.img {
+  display: inline-block;
+  width: 20vw;
+  height: 20vw;
+  margin: 1vw;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}
+
+
+.img1 {
+  background-image: url('../img/table1.jpeg');
+}
+
+.img2 {
+  background-image: url('../img/balcony.jpeg');
+}
+
+.img3 {
+  background-image: url('../img/ImageGalleryHandler%20(1).jpeg');
+}
+
+.img4 {
+  background-image: url('../img/ImageGalleryHandler%20(2).jpeg');
+}
+
+.img5 {
+  background-image: url('../img/ImageGalleryHandler.jpeg');
+}
+
+.img6 {
+  background-image: url('../img/shelf.jpeg');
+}
+
+.img7 {
+  background-image: url('../img/stairs.jpeg');
+}
+
+.img8 {
+  background-image: url('../img/table.jpeg');
+}
+
+.img9 {
+  background-image: url('../img/door.jpeg');
+}
+
+.pop-up {
+  display: none;
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 0 3vw rgba(0, 0, 0, 0.4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding: 5vw;
+  box-sizing: inherit;
+}
+
+.close-btn {
+  display: block;
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  right: 2vw;
+  top: 2vw;
+  background: white;
+  border: 0.5vw solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.close-btn:before {
+  content: 'X';
+  font-size: 3.7vw;
+  font-weight: bolder;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
