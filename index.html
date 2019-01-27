@@ -14,6 +14,16 @@
 
 <body>
 
+  <div id="navbar">
+    <img class="nav-logo" src="img/logo-with-pic.png">
+    <a class="nav-item active" href="#Introductie">Introductie</a>
+    <a class="nav-item" href="#Sierhekwerken">Sierhekwerken</a>
+    <a class="nav-item" href="#Automatisering">Automatisering</a>
+    <a class="nav-item" href="#Interieurwerk">Interieurwerk</a>
+    <a class="nav-item" href="#Galerij">Galerij</a>
+    <a class="nav-item" href="#Contact">Contact</a>
+  </div>
+
   <div class="header">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 595.3 283.5" style="enable-background:new 0 0 595.3 283.5;" xml:space="preserve">
       <rect x="11.8" y="20.2" class="st0" width="19.2" height="256.3" />
@@ -127,16 +137,6 @@
     <img src="img/text-logo.png" style="width: 30vw;">
   </div>
 
-  <div id="navbar">
-    <img class="nav-logo" src="img/logo-with-pic.png" style="width:10vw;">
-    <a class="nav-item active" href="#Introductie">Introductie</a>
-    <a class="nav-item" href="#Sierhekwerken">Sierhekwerken</a>
-    <a class="nav-item" href="#Automatisering">Automatisering</a>
-    <a class="nav-item" href="#Interieurwerk">Interieurwerk</a>
-    <a class="nav-item" href="#Galerij">Galerij</a>
-    <a class="nav-item" href="#Contact">Contact</a>
-  </div>
-
   <main>
 
     <div class="text-section section1" id="Introductie">
@@ -196,6 +196,7 @@
           <li>Stalen deuren</li>
           <li>Onderdelen voor keukens en open haarden</li>
           <li>Zwart stalen tafelpoten en kasten</li>
+          <li>Bijzet tafeltjes</li>
         </ul>
       </div>
     </div>
@@ -225,9 +226,10 @@
           Neem dan contact op met J. de Goede.
           <br><br>
           Werkplaats:
-          <br>Oosterweg M5
-          <br>1482 AH Purmer
-          <br><br>Tel: 0299-641020
+          <a href="https://www.google.com/maps/place/Purmerenderweg+29,+1461+DB+Zuidoostbeemster/@52.5431272,4.9554054,16z/data=!4m5!3m4!1s0x47c60104aea1f02b:0xe358cf9d894d1a9b!8m2!3d52.5459067!4d4.9606196" target="_blank">
+          <br>Purmerenderweg 29
+          <br>1461 DB. Zuidoost Beemster</a>
+          <br><br>Tel: 06 51 88 61 13
           <br><br>Email: degoede@smederijdegoede.nl
         </p>
       </div>
@@ -270,6 +272,43 @@
       $('.pop-up').slideUp();
       $('.pop-up-tech').slideUp();
     });
+    
+    // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 600, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
 
   </script>
 
