@@ -6,13 +6,20 @@ body {
 }
 
 .text-section {
-  padding: 5vw 8vw;
+  padding: 5vw;
 }
 
 .text-section:focus {
   outline: none;
   box-shadow: none;
   border: none;
+}
+
+.section1 {
+  padding: 2vw;
+  margin: 4vw;
+  border: solid 0.3vw black;
+  box-shadow: 0 0 0 0.3vw #fff, 0 0 0 0.6vw #000;
 }
 
 .section2 {
@@ -176,8 +183,8 @@ svg {
 
 .img {
   display: inline-block;
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
   margin: 1vw;
   padding: 0;
   background-repeat: no-repeat;
@@ -188,19 +195,19 @@ svg {
 
 
 .img1 {
-  background-image: url('../img/table1.jpeg');
+  background-image: url('../img/gate7.jpeg');
 }
 
 .img2 {
-  background-image: url('../img/balcony.jpeg');
+  background-image: url('../img/gate6.jpeg');
 }
 
 .img3 {
-  background-image: url('../img/ImageGalleryHandler%20(1).jpeg');
+  background-image: url('../img/gate5.jpeg');
 }
 
 .img4 {
-  background-image: url('../img/ImageGalleryHandler%20(2).jpeg');
+  background-image: url('../img/gate3.jpeg');
 }
 
 .img5 {
@@ -208,7 +215,7 @@ svg {
 }
 
 .img6 {
-  background-image: url('../img/shelf.jpeg');
+  background-image: url('../img/handrail.jpeg');
 }
 
 .img7 {
@@ -216,11 +223,55 @@ svg {
 }
 
 .img8 {
-  background-image: url('../img/table.jpeg');
+  background-image: url('../img/balcony.jpeg');
 }
 
 .img9 {
+  background-image: url('../img/balcony2.jpeg');
+}
+
+.img10 {
+  background-image: url('../img/balcony3.jpeg');
+}
+
+.img11 {
+  background-image: url('../img/table.jpeg');
+}
+
+.img12 {
+  background-image: url('../img/table1.jpeg');
+}
+
+.img13 {
+  background-image: url('../img/boxes.jpeg');
+}
+
+.img14 {
+  background-image: url('../img/desk.jpeg');
+}
+
+.img15 {
+  background-image: url('../img/closet.jpeg');
+}
+
+.img16 {
   background-image: url('../img/door.jpeg');
+}
+
+.img17 {
+  background-image: url('../img/door2.jpeg');
+}
+
+.img18 {
+  background-image: url('../img/door3.jpeg');
+}
+
+.img19 {
+  background-image: url('../img/balcony2.jpeg');
+}
+
+.img20 {
+  background-image: url('../img/balcony3.jpeg');
 }
 
 .pop-up {
@@ -264,4 +315,10 @@ svg {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+}
+
+footer {
+  text-align: center;
+  padding: 1vw;
+  font-size: 13px;
 }
