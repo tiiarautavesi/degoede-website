@@ -254,6 +254,10 @@
 
 
   <script>
+    if (navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i) ){
+      $("svg").hide();
+    }
+    
     window.onscroll = function() {
       myFunction()
     };
