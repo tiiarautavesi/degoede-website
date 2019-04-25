@@ -16,10 +16,7 @@ body {
 }
 
 .section1 {
-  padding: 2vw;
-  margin: 4vw;
-  border: solid 0.3vw black;
-  box-shadow: 0 0 0 0.3vw #fff, 0 0 0 0.6vw #000;
+  background-color: #def2c1;
 }
 
 .section2 {
@@ -28,7 +25,7 @@ body {
   background-size: cover;
 }
 
-.section3 {
+.section4 {
   background-image: url("../img/shelf-bg.jpg");
   background-repeat: no-repeat, repeat;
   background-size: cover;
@@ -211,7 +208,7 @@ svg {
 }
 
 .img5 {
-  background-image: url('../img/ImageGalleryHandler.jpeg');
+  background-image: url('../img/gate9.jpeg');
 }
 
 .img6 {
@@ -267,11 +264,11 @@ svg {
 }
 
 .img19 {
-  background-image: url('../img/balcony2.jpeg');
+  background-image: url('../img/shelf.jpeg');
 }
 
 .img20 {
-  background-image: url('../img/balcony3.jpeg');
+  background-image: url('../img/side-desk.jpeg');
 }
 
 .pop-up {
@@ -315,6 +312,7 @@ svg {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+  pointer-events: none;
 }
 
 footer {

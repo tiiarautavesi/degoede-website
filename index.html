@@ -173,17 +173,17 @@
       </div>
     </div>
 
-    <div class="text-section" id="Automatisering">
+    <div class="text-section section3" id="Automatisering">
       <div class="text-container4">
         <h1>Automatisering</h1>
         <p>Nieuwe of bestaande poorten kunnen we voorzien van een automatisering.
-          Daarbij kunnen wij ook u garage deuren ombouwen en voorzien van een automatisering waarna alles automatisch open en dicht gaat.
+          Daarbij kunnen wij ook uw garage deuren ombouwen en voorzien van een automatisering waarna alles automatisch open en dicht gaat.
         </p>
       </div>
       <img class="img-container-gif" src="img/remote.gif">
     </div>
 
-    <div class="text-section section3" id="Interieurwerk">
+    <div class="text-section section4" id="Interieurwerk">
       <div class="text-container3">
         <h1>Interieurwerk</h1>
         <p>
@@ -200,7 +200,7 @@
         </ul>
       </div>
     </div>
-    <div class="text-section" id="Galerij">
+    <div class="text-section section5" id="Galerij">
       <div class="gallery">
         <h1>Galerij</h1>
         <div class="img img1"></div>
@@ -236,7 +236,7 @@
           Eens kennismaken of een offerte aanvragen?
           Neem dan contact op met J. de Goede.
           <br><br>
-          Werkplaats:
+          Werkplaats (klik adres voor Google Maps):
           <a href="https://www.google.com/maps/place/Purmerenderweg+29,+1461+DB+Zuidoostbeemster/@52.5431272,4.9554054,16z/data=!4m5!3m4!1s0x47c60104aea1f02b:0xe358cf9d894d1a9b!8m2!3d52.5459067!4d4.9606196" target="_blank">
           <br>Purmerenderweg 29
           <br>1461 DB. Zuidoost Beemster</a>
@@ -289,18 +289,18 @@
       $('.pop-up-tech').slideUp();
     });
     
-    // Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+        && 
+        location.hostname == this.hostname
+      ) {
       // Figure out element to scroll to
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -325,6 +325,41 @@ $('a[href*="#"]')
       }
     }
   });
+
+  var initialTopOffset = 150;
+    console.log("offset: " + initialTopOffset);
+  $(window).scroll(function(event) {
+    var scroll = $(window).scrollTop();
+    // if the top of our browser is inside the section2
+    if (scroll + initialTopOffset >= $('.section1').offset().top && scroll + initialTopOffset <= $('.section1').offset().top + $('.section1').outerHeight()) {
+      $('.nav-item').removeClass('active'); // remove the class
+      $('.nav-item:eq(0)').addClass('active'); // add the class
+      console.log("section1 visible");
+    } else if (scroll + initialTopOffset >= $('.section2').offset().top && scroll + initialTopOffset <= $('.section2').offset().top + $('.section2').outerHeight()) {
+      $('.nav-item').removeClass('active'); // remove the class
+      $('.nav-item:eq(1)').addClass('active'); // add the class
+      console.log("section2 visible");
+    } else if (scroll + initialTopOffset >= $('.section3').offset().top && scroll + initialTopOffset <= $('.section3').offset().top + $('.section3').outerHeight()) {
+      $('.nav-item').removeClass('active'); // remove the class
+      $('.nav-item:eq(2)').addClass('active'); // add the class
+      console.log("section2 visible");
+    } else if (scroll + initialTopOffset >= $('.section4').offset().top && scroll + initialTopOffset <= $('.section4').offset().top + $('.section4').outerHeight()) {
+      $('.nav-item').removeClass('active'); // remove the class
+      $('.nav-item:eq(3)').addClass('active'); // add the class
+      console.log("section2 visible");
+    } else if (scroll + initialTopOffset >= $('.section5').offset().top && scroll + initialTopOffset <= $('.section5').offset().top + $('.section5').outerHeight()) {
+      $('.nav-item').removeClass('active'); // remove the class
+      $('.nav-item:eq(4)').addClass('active'); // add the class
+      console.log("section2 visible");
+    } else if (scroll + initialTopOffset >= $('.section6').offset().top && scroll + initialTopOffset <= $('.section6').offset().top + $('.section6').outerHeight()) {
+      $('.nav-item').removeClass('active'); // remove the class
+      $('.nav-item:eq(5)').addClass('active'); // add the class
+      console.log("section2 visible");
+    }
+  });
+
+  //trigger the scroll
+  $(window).scroll(); //ensure if you're in current position when page is refreshed
 
   </script>
 </body>
